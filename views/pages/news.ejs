@@ -1,0 +1,30 @@
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <h1>News</h1>
+            <p>These are the latest news about Crypto.</p>
+        </div>
+    </div>
+    <!-- center row content  -->
+    <div class="row justify-content-center">
+        <div class="col-xl-8 col-12 col-sm-12 col-xs-12 col-md-12">
+            <% for (var i=0; i < 5; i++) { %>
+
+                <div class="card w-100 my-3">
+                    <div class="row no-gutters">
+                      <div class="col-md-4">
+                        <img src="<%= news[i].imageurl %>" class="card-img" alt="Image">
+                      </div>
+                      <div class="col-md-8">
+                        <div class="card-body">
+                          <h5 class="card-title"><%= news[i].title %></h5>
+                          <p class="card-text"><%= news[i].body %></p>
+                        </div>
+                        <a href="<%= news[i].url %>" class="btn btn-outline-dark w-100">View</a>
+                      </div>
+                    </div>
+                  </div>
+                <% } %>
+        </div>
+    </div>
+</div>
